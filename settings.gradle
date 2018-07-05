@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'Parcelsize_AWS'
+rootProject.name = 'Parcelsize-AWS'
