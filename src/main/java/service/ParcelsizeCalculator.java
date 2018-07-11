@@ -12,7 +12,7 @@ public class ParcelsizeCalculator {
 	public ParcelsizeCalculator() {
 		db = MySQLDatabaseHandler.getDatabaseHandler();
 		
-		db.openConnection("jdbc:mysql://localhost:3306/ms_parcel_size?user=root&password=evelinroot");
+		db.openConnection("jdbc:mysql://mysql-parcelsize:3306/ms_parcel_size?user=user&password=userpassword");
 		
 		parcelSizeMap = new HashMap<Integer,Parcelsize>();
 		parcelSizeMap = db.getParcelSizeTable();
