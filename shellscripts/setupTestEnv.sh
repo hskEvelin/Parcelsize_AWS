@@ -7,7 +7,7 @@ vagrant up
 docker save -o parcelsize parcelsize
 
 #laden der Docker images vom Asset-Server
-wget http://192.168.56.103/images/parcelwebserver
+wget http://192.168.56.103/images/parcelwebserver.tar
 
 echo 'laden der Docker images '
 #laden der Docker images
