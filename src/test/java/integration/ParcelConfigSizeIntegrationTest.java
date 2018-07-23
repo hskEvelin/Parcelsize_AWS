@@ -10,7 +10,7 @@ public class ParcelConfigSizeIntegrationTest {
 
 	@Test
 	public void testDatabaseConnection(){
-		final String uri = "http://localhost:1100/parcel/sent/test/dbcon";
+		final String uri = "http://192.168.56.102:1100/parcel/sent/test/dbcon";
 	     
 	    RestTemplate restTemplate = new RestTemplate();
 	    DbStatus result = restTemplate.getForObject(uri, DbStatus.class);
