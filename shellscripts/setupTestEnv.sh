@@ -8,11 +8,13 @@ docker save -o parcelsize parcelsize
 
 #laden der Docker images vom Asset-Server
 wget http://192.168.56.103/images/parcelwebserver.tar
+wget http://192.168.56.103/images/mysql.tar
 
 echo 'laden der Docker images '
 #laden der Docker images
 vagrant ssh -c 'docker load -i /vagrant/parcelsize'
 vagrant ssh -c 'docker load -i /vagrant/parcelwebserver.tar'
+vagrant ssh -c 'docker load -i /vagrant/mysql.tar'
 
 #starten der docker container
 echo 'starten der Docker images '
