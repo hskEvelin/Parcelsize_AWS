@@ -17,4 +17,6 @@ public class ParcelConfigSizeIntegrationTest {
 	     
 	    assertEquals(DbStatus.CONNECTED, result);
 	}
+	
+
 }

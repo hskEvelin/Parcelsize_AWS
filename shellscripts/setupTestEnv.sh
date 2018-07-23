@@ -19,7 +19,7 @@ echo 'starten der Docker images '
 vagrant ssh -c 'docker network create parcelconfig-net'
 
 vagrant ssh -c 'docker run --name webserver --net parcelconfig-net -p 8888:8080 -d parcelwebserver'
-vagrant ssh -c 'docker run --name parcelservice --net parcelconfig-net -p 1100:1100 -d parcelsize'
+vagrant ssh -c 'docker run --name parcelsize-service_1 --net parcelconfig-net -p 1100:1100 -d parcelsize'
 vagrant ssh -c 'docker run --name mysql-parcelsize --net parcelconfig-net -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=mysqlroot --mount type=bind,src=/vagrant/scripts/,dst=/docker-entrypoint-initdb.d/ mysql:5.7.22'
 
 

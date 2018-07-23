@@ -1,15 +1,15 @@
 #!/bin/bash
 
-vagrant ssh -c 'docker stop -t=0 mysql-pc-size'
+vagrant ssh -c 'docker stop -t=0 mysql-parcelsize'
 vagrant ssh -c 'docker stop -t=0 webserver'
 
-vagrant ssh -c 'docker rm mysql-pc-size'
+vagrant ssh -c 'docker rm mysql-parcelsize'
 vagrant ssh -c 'docker rm webserver'
 
 for i in $(seq 1 $1)
 do
-	vagrant ssh -c 'docker stop -t=0 parcelconfig-size-service_'$i
-	vagrant ssh -c 'docker rm parcelconfig-size-service_'$1
+	vagrant ssh -c 'docker stop -t=0 parcelsize-service_'$i
+	vagrant ssh -c 'docker rm parcelsize-service_'$1
 done
 
 
