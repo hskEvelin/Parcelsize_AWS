@@ -15,11 +15,11 @@ sftp ubuntu@192.168.56.101 <<< $'put parcelsize images/'
 #load docker image to local docker registry and start container
 ssh ubuntu@192.168.56.101 'docker load -i images/parcelsize'
 
-sshcmd='docker ps --filter ancestor=parcelconfig-size:'$v' --format "{{.Names}}"'
+sshcmd='docker ps --filter ancestor=parcelsize:'$v' --format "{{.Names}}"'
 echo $sshcmd
 
 result=$(ssh ubuntu@192.168.56.101 $sshcmd)
-var=1
+var=3
 for i in $result
 do
 	port=$(expr 1100 + $var)
