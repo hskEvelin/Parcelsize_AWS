@@ -16,5 +16,5 @@ else
 	sed -i 's/^parcelsize=.*/parcelsize='$1'/g' versions
 fi
 
-sftp vagrant@192.168.56.105 <<< $'put parcelsize www/images/'
-sftp vagrant@192.168.56.105 <<< $'put versions www/images/'
+sftp vagrant@192.168.56.105 <<< $'put parcelsize /var/www/html/images/'
+sftp vagrant@192.168.56.105 <<< $'put versions /var/www/html/images/'

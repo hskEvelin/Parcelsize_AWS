@@ -19,7 +19,7 @@ sshcmd='docker ps --filter ancestor=parcelsize:'$v' --format "{{.Names}}"'
 echo $sshcmd
 
 result=$(ssh ubuntu@192.168.56.101 $sshcmd)
-var=3
+var=1
 for i in $result
 do
 	port=$(expr 1100 + $var)
