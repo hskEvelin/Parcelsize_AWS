@@ -19,7 +19,7 @@ sshcmd='docker ps --filter ancestor=parcelsize:'$v' --format "{{.Names}}"'
 echo $sshcmd
 
 result=$(ssh ubuntu@192.168.56.101 $sshcmd)
-var=1
+var=3
 for i in $result
 do
 	port=$(expr 1100 + $var)
@@ -29,7 +29,7 @@ do
 done	 
 
 #load js file to webserver
-ssh vagrant@192.168.56.105 'mv www/js/parcel-size-component.js www/js/parcel-size-component_old.js'
-sftp vagrant@192.168.56.105 <<< $'put web/js/parcel-size.component.js www/js/'
+ssh vagrant@192.168.56.105 'mv /var/www/html/js/parcel-size-component.js /var/www/html/js/parcel-size-component_old.js'
+sftp vagrant@192.168.56.105 <<< $'put web/js/parcel-size.component.js /var/www/html/js/'
 
 
