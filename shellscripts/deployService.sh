@@ -29,6 +29,7 @@ do
 done	 
 
 #load js file to webserver
-sftp -oPort=2200 vagrant@127.0.0.1 <<< $'put web/js/parcel-size.component.js www/js/'
+ssh vagrant@192.168.56.105 'mv www/js/parcel-size-component.js www/js/parcel-size-component_old.js'
+sftp vagrant@192.168.56.105 <<< $'put web/js/parcel-size.component.js www/js/'
 
 

@@ -6,9 +6,9 @@ vagrant up
 #speichern des aktuellen Docker Images des MS in shared folder
 docker save -o parcelsize parcelsize
 
-#laden der Docker images vom Asset-Server
-wget http://192.168.56.103/images/parcelwebserver.tar
-wget http://192.168.56.103/images/mysql.tar
+#laden der Docker images vom Asset-Server (Production)
+wget http://192.168.56.105/images/parcelwebserver.tar
+wget http://192.168.56.105/images/mysql.tar
 
 echo 'laden der Docker images '
 #laden der Docker images
