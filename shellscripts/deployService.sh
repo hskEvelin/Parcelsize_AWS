@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #get version number of current running service
-sftp -oPort=2200 vagrant@127.0.0.1:www/images/versions versions
+wget http://192.168.56.105/images/versions
 . versions
 v=$parcelsize
 
