@@ -3,7 +3,7 @@
 #starten der VM
 vagrant up
 
-#speichern des aktuellen Docker Images des MS
+#speichern des aktuellen Docker Images des MS in shared folder
 docker save -o parcelsize parcelsize
 
 #laden der Docker images vom Asset-Server

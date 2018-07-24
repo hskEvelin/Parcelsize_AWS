@@ -42,7 +42,7 @@ angular.
     	  console.log(JSON.stringify(this.parcel));
     	
     	 $http({
-    		    url: "http://192.168.56.102:1100/parcel/sent/size",
+    		    url: "http://vm.parcel.aps.com:1100/parcel/sent/size",
     		    dataType: "json",
     		    method: "POST",
     		    data: JSON.stringify(this.parcel),
